@@ -1,0 +1,5 @@
+/bin/*
+*.o
+*.so
+redir.txt
+valgrind-out.txt

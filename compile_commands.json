@@ -1,0 +1,13 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-O2",
+      "-Wall",
+      "example.c"
+    ],
+    "directory": "/home/rijojohn/dev/C/crypto_lib",
+    "file": "/home/rijojohn/dev/C/crypto_lib/example.c"
+  }
+]
