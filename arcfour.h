@@ -1,6 +1,8 @@
 #ifndef ARCFOUR
 #define ARCFOUR
 
+#define _GNU_SOURCE
+
 #include <assert.h>
 #include <errno.h>
 #include <stdio.h>

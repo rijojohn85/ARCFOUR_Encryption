@@ -1,5 +1,4 @@
 #include "arcfour.h"
-#include <stdlib.h>
 
 Arcfour *rc4init(int8 *key, int16 size) {
   int16 x;
@@ -52,11 +51,11 @@ int8 rc4byte(Arcfour *p) {
 
 int8 *rc4encrypt(int8 *pt, int16 size, Arcfour *p) {
   int8 *cipher_text = malloc((sizeof(int8) * size) + 1);
+  if (!cipher_text)
+    assert_perror(errno);
   int8 *ct = cipher_text;
   while (*pt) {
-    *ct = *pt ^ rc4byte(p);
-    ct += 1;
-    pt += 1;
+    *ct++ = *pt++ ^ rc4byte(p);
   }
   *ct = '\0';
   return cipher_text;
