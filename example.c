@@ -113,7 +113,7 @@ int main(void) {
   printf("Encrypted: %s\n", encrypted);
   free(rc4);
   rc4 = rc4init(key, skey); // could fail. check for 0 in production -- malloc
-  decrypted = rc4encrypt(encrypted, length(encrypted), rc4);
+  decrypted = rc4decrypt(encrypted, length(encrypted), rc4);
   printf("Decrypted: %s\n", decrypted);
   free(rc4);
   free(encrypted);
